@@ -4,12 +4,11 @@ exports.handler = async (event, context) => {
   const API_ENDPOINT = "https://api.postmarkapp.com/email/withTemplate";
   const json = JSON.parse(event.body)
   console.log(json)
-  const { name, email, business, extra } = json.payload.data
   const options = {
     from: 'contact@carrythroughcovid.com',
     to: email,
     TemplateId: 17062289,
-    TemplateModel: { name, email, business, extra }
+    TemplateModel: { ...json.payload.data }
   }
 
 
