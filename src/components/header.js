@@ -8,10 +8,14 @@ const StyledHeader = styled.header`
   justify-content: center;
 `
 
+const UnstyledLink = styled(Link)`
+  text-decoration: none;
+`
+
 const Header = ({ siteTitle }) => (
   <StyledHeader>
     <h1>
-      <Link to="/">{siteTitle}</Link>
+      <UnstyledLink to="/">{siteTitle}</UnstyledLink>
     </h1>
   </StyledHeader>
 )

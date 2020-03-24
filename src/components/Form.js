@@ -24,13 +24,13 @@ const Form = () => {
       <input type="hidden" name="form-name" value="eoi" />
       <FormField name="name" label="Name" ref={register()} />
       <FormField name="email" label="Email" ref={register()} />
-      <FormField name="business-type" label="Business Type">
-        <Select options={options} name="business-type" forwardRef={register()} />
+      <FormField name="business" label="Business Type">
+        <Select options={options} name="business" forwardRef={register()} />
       </FormField>
-      <FormField name="extra-info" label="Extra Information">
+      <FormField name="extra" label="Extra Information">
         <TextArea
           placeholder="Tell us more about what you are offering."
-          name="extra-info"
+          name="extra"
           forwardRef={register()}
         />
       </FormField>
