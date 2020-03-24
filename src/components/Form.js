@@ -8,7 +8,8 @@ import {
   TextArea,
 } from "grommet"
 
-const options = ['Restaurant/Cafe','Retail','Other']
+const businessOptions = ['Restaurant/Cafe','Retail','Other']
+const offeringOptions = ['Takeaway','Delivery','Online','Other']
 
 const Form = () => {
   const formRef = useRef(null)
@@ -22,10 +23,14 @@ const Form = () => {
     <GrommetForm ref={formRef} name="eoi" method="post" action="/submitted" onSubmit={handleSubmit(onSubmit)} data-netlify="true" data-netlify-honeypot="bot-field">
       <input type="hidden" name="bot-field" />
       <input type="hidden" name="form-name" value="eoi" />
-      <FormField name="name" label="Name" ref={register()} />
+      <FormField name="businessName" label="Business Name" ref={register()} />
+      <FormField name="name" label="Your Name" ref={register()} />
       <FormField name="email" label="Email" ref={register()} />
-      <FormField name="business" label="Business Type">
-        <Select options={options} name="business" forwardRef={register()} />
+      <FormField name="businessType" label="Business Type">
+        <Select options={businessOptions} name="businessType" forwardRef={register()} />
+      </FormField>
+      <FormField name="offeringType" label="Your Offering">
+        <Select options={offeringOptions} name="offeringType" forwardRef={register()} />
       </FormField>
       <FormField name="extra" label="Extra Information">
         <TextArea
@@ -34,6 +39,7 @@ const Form = () => {
           forwardRef={register()}
         />
       </FormField>
+      <FormField name="website" label="Website" ref={register()} />
       <Button type="submit" primary label="Submit" />
     </GrommetForm>
   )
