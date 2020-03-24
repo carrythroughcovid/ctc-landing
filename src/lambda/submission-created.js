@@ -6,9 +6,9 @@
 //   console.log(json)
 //   const { email } = json.payload.data
 //   const options = {
-//     from: '',
+//     from: 'contact@carrythroughcovid.com',
 //     to: email,
-//     TemplateId: ,
+//     TemplateId: 17062289,
 //     TemplateModel: {
 //     }
 //   }

@@ -1,6 +1,7 @@
 import React from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
+import { Grommet } from 'grommet'
 
 import Header from "./header"
 import "./layout.css"
@@ -17,10 +18,10 @@ const Layout = ({ children }) => {
   `)
 
   return (
-    <>
+    <Grommet plain>
       <Header siteTitle={data.site.siteMetadata.title} />
       <main>{children}</main>
-    </>
+    </Grommet>
   )
 }
 

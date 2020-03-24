@@ -61,7 +61,7 @@ function SEO({ description, lang, meta, title }) {
           content: metaDescription,
         },
         {
-          name: `google-site-verification`,
+          name: 'google-site-verification',
           content: 'ucCff8ZpXCJFoXWNHvj1BS8sjDuMJhNNMq6sn6dcsRk'
         },
       ].concat(meta)}

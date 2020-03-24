@@ -1,23 +1,41 @@
 import React, { useRef } from "react"
-import styled from "styled-components"
 import { useForm } from "react-hook-form"
+import {
+  Form as GrommetForm,
+  FormField,
+  Button,
+  Select,
+  TextArea,
+} from "grommet"
+
+const options = ['Restaurant/Cafe','Retail','Other']
 
 const Form = () => {
   const formRef = useRef(null)
-  const { register, handleSubmit, errors, watch } = useForm()
+  const { register, handleSubmit } = useForm()
 
   const onSubmit = () => {
     formRef.current.submit()
   }
 
   return (
-    <form ref={formRef} name="eoi" method="post" action="/submitted" onSubmit={handleSubmit(onSubmit)} data-netlify="true" data-netlify-honeypot="bot-field">
+    <GrommetForm ref={formRef} name="eoi" method="post" action="/submitted" onSubmit={handleSubmit(onSubmit)} data-netlify="true" data-netlify-honeypot="bot-field">
       <input type="hidden" name="bot-field" />
       <input type="hidden" name="form-name" value="eoi" />
-      <input type="text" name="name" placeholder="name" ref={register()} />
-      <input type="text" name="email" placeholder="email" ref={register()} />
-      <input type="submit" value="Submit Interest" />
-    </form>
+      <FormField name="name" label="Name" ref={register()} />
+      <FormField name="email" label="Email" ref={register()} />
+      <FormField name="business-type" label="Business Type">
+        <Select options={options} name="business-type" forwardRef={register()} />
+      </FormField>
+      <FormField name="extra-info" label="Extra Information">
+        <TextArea
+          placeholder="Tell us more about what you are offering."
+          name="extra-info"
+          forwardRef={register()}
+        />
+      </FormField>
+      <Button type="submit" primary label="Submit" />
+    </GrommetForm>
   )
 }
 
