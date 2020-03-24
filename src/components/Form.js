@@ -15,6 +15,7 @@ const Form = () => {
       <input type="hidden" name="bot-field" />
       <input type="hidden" name="form-name" value="eoi" />
       <input type="text" name="name" placeholder="name" ref={register()} />
+      <input type="text" name="email" placeholder="email" ref={register()} />
       <input type="submit" value="Submit Interest" />
     </form>
   )
