@@ -1,4 +1,16 @@
+var proxy = require("http-proxy-middleware")
 module.exports = {
+  developMiddleware: app => {
+    app.use(
+      "/.netlify/functions/",
+      proxy({
+        target: "http://localhost:9000",
+        pathRewrite: {
+          "/.netlify/functions/": "",
+        },
+      })
+    )
+  },
   siteMetadata: {
     title: `Carry Through Covid`,
     description: `Support small business near you during Covid-19.`,
