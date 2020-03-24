@@ -1,13 +1,19 @@
 import { Link } from "gatsby"
 import PropTypes from "prop-types"
 import React from "react"
+import styled from "styled-components"
+
+const StyledHeader = styled.header`
+  display: flex;
+  justify-content: center;
+`
 
 const Header = ({ siteTitle }) => (
-  <header>
+  <StyledHeader>
     <h1>
       <Link to="/">{siteTitle}</Link>
     </h1>
-  </header>
+  </StyledHeader>
 )
 
 Header.propTypes = {
