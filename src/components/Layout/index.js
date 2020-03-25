@@ -4,6 +4,7 @@ import { useStaticQuery, graphql } from "gatsby"
 import { Grommet } from "grommet"
 
 import Header from "../Header"
+import Footer from "../Footer"
 import "./Layout.css"
 
 import StyledTheme from "../../styles/StyledTheme"
@@ -24,6 +25,7 @@ const Layout = ({ children }) => {
       <StyledTheme>
         <Header siteTitle={data.site.siteMetadata.title} />
         <main>{children}</main>
+        <Footer siteTitle={data.site.siteMetadata.title} />
       </StyledTheme>
     </Grommet>
   )
