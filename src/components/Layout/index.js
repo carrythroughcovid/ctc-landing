@@ -1,10 +1,12 @@
 import React from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
-import { Grommet } from 'grommet'
+import { Grommet } from "grommet"
 
-import Header from "./header"
-import "./layout.css"
+import Header from "../Header"
+import "./Layout.css"
+
+import StyledTheme from "../../styles/StyledTheme"
 
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
@@ -19,8 +21,10 @@ const Layout = ({ children }) => {
 
   return (
     <Grommet plain>
-      <Header siteTitle={data.site.siteMetadata.title} />
-      <main>{children}</main>
+      <StyledTheme>
+        <Header siteTitle={data.site.siteMetadata.title} />
+        <main>{children}</main>
+      </StyledTheme>
     </Grommet>
   )
 }
