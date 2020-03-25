@@ -1,4 +1,4 @@
-import { mapValues } from 'lodash';
+import { mapValues } from "lodash"
 
 const breakpoints = {
   xs: 0,
@@ -7,16 +7,13 @@ const breakpoints = {
   ml: 56,
   lg: 60,
   xl: 96,
-};
+}
 
 export const mediaQueries = mapValues(
   breakpoints,
-  point => `(min-width: ${point}rem)`,
-);
+  point => `(min-width: ${point}rem)`
+)
 
-export const rems = mapValues(
-  breakpoints,
-  point => `${point}rem`,
-);
+export const rems = mapValues(breakpoints, point => `${point}rem`)
 
-export default breakpoints;
+export default breakpoints

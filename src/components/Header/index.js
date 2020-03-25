@@ -4,6 +4,7 @@ import React from "react"
 import styled from "styled-components"
 
 const StyledHeader = styled.header`
+  border-top: 5px solid ${({ theme }) => theme.purple};
   display: flex;
   justify-content: center;
 `
