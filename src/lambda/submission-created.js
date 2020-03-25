@@ -3,6 +3,7 @@ import fetch from "node-fetch";
 exports.handler = async (event, context) => {
   const API_ENDPOINT = "https://api.postmarkapp.com/email/withTemplate";
   const json = JSON.parse(event.body)
+  const { email } = json.payload.data
   console.log(json)
   const options = {
     from: 'contact@carrythroughcovid.com',
