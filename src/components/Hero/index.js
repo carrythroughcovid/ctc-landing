@@ -1,17 +1,34 @@
 import PropTypes from "prop-types"
 import React from "react"
-import { css } from "styled-components"
+import styled from "styled-components"
 
-const StyledHero = css``
+import Container from "../Layout/Container"
+import Hero from "./Hero"
+import Pitch from "./Pitch"
 
-const Hero = () => (
-  <StyledHero>
-    <h1>Hero</h1>
-  </StyledHero>
+const Wrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  justify-content: space-around;
+  padding: 2rem 0;
+
+  @media ${props => props.theme.md} {
+    flex-direction: row;
+  }
+`
+
+const HeroSection = () => (
+  <Container>
+    <Wrapper>
+      <Hero />
+      <Pitch />
+    </Wrapper>
+  </Container>
 )
 
 Hero.propTypes = {}
 
 Hero.defaultProps = {}
 
-export default Hero
+export default HeroSection

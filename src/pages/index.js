@@ -4,6 +4,7 @@ import styled from "styled-components"
 import Layout from "../components/Layout"
 import SEO from "../components/seo"
 import Form from "../components/Form"
+import Hero from "../components/Hero"
 
 const FullWidthContainer = styled.div`
   width: 100%;
@@ -18,6 +19,7 @@ const PageContainer = styled.div`
 const IndexPage = () => (
   <Layout>
     <SEO title="Home" />
+    <Hero />
     <FullWidthContainer>
       <PageContainer>
         <Form />
