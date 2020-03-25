@@ -8,7 +8,7 @@ import Action from "../components/Action"
 
 const IndexPage = () => (
   <Layout>
-    <SEO title="Carry Through Covid" />
+    <SEO title="Carry through COVID" />
     <Hero />
     <Progress />
     <Action />

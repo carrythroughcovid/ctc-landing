@@ -1,17 +1,28 @@
 import PropTypes from "prop-types"
 import React from "react"
-import { css } from "styled-components"
+import styled from "styled-components"
 
-const StyledFooter = css``
+const StyledFooter = styled.footer`
+  padding-top: 40px;
+  padding-bottom: 20px;
+  text-align: center;
+  @media ${props => props.theme.sm} {
+    padding-top: 20px;
+  }
+`
 
-const Footer = () => (
+const Footer = ({ siteTitle }) => (
   <StyledFooter>
-    <h1>Footer</h1>
+    {new Date().getFullYear()} &copy; {siteTitle}
   </StyledFooter>
 )
 
-Footer.propTypes = {}
+Footer.propTypes = {
+  siteTitle: PropTypes.string,
+}
 
-Footer.defaultProps = {}
+Footer.defaultProps = {
+  siteTitle: ``,
+}
 
 export default Footer

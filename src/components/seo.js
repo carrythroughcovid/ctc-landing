@@ -61,11 +61,16 @@ function SEO({ description, lang, meta, title }) {
           content: metaDescription,
         },
         {
-          name: 'google-site-verification',
-          content: 'ucCff8ZpXCJFoXWNHvj1BS8sjDuMJhNNMq6sn6dcsRk'
+          name: "google-site-verification",
+          content: "ucCff8ZpXCJFoXWNHvj1BS8sjDuMJhNNMq6sn6dcsRk",
         },
       ].concat(meta)}
-    />
+    >
+      <link
+        href="https://fonts.googleapis.com/css?family=Source+Sans+Pro"
+        rel="stylesheet"
+      />
+    </Helmet>
   )
 }
 

@@ -12,7 +12,7 @@ module.exports = {
     )
   },
   siteMetadata: {
-    title: `Carry Through Covid`,
+    title: `Carry through COVID`,
     description: `Support small business near you during Covid-19.`,
     author: `@peroh`,
   },
