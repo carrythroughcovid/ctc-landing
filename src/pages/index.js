@@ -1,32 +1,17 @@
 import React from "react"
-import styled from "styled-components"
 
 import Layout from "../components/Layout"
 import SEO from "../components/seo"
-import Form from "../components/Form"
 import Hero from "../components/Hero"
 import Progress from "../components/Progress"
-
-const FullWidthContainer = styled.div`
-  width: 100%;
-`
-
-const PageContainer = styled.div`
-  margin: auto;
-  display: flex;
-  justify-content: center;
-`
+import Action from "../components/Action"
 
 const IndexPage = () => (
   <Layout>
-    <SEO title="Home" />
+    <SEO title="Carry Through Covid" />
     <Hero />
     <Progress />
-    <FullWidthContainer>
-      <PageContainer>
-        <Form />
-      </PageContainer>
-    </FullWidthContainer>
+    <Action />
   </Layout>
 )
 
