@@ -2,7 +2,7 @@ import React from "react"
 import styled from "styled-components"
 
 const ColoredText = styled.span`
-  color: #30729A;
+  color: ${({ theme }) => theme.purple};
 `
 
 const Wrapper = styled.div`
@@ -14,6 +14,7 @@ const Wrapper = styled.div`
 
 const Title = styled.div`
   font-size: 2rem;
+  font-weight: bold;
 `
 
 const SubTitle = styled.div`
@@ -27,7 +28,7 @@ const Logo = () => (
       carry<ColoredText>through</ColoredText>covid
     </Title>
     <SubTitle>
-      let's help carry small business through covid19
+      connecting YOUR business to YOUR community
     </SubTitle>
   </Wrapper>
 )

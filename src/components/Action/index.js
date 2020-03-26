@@ -3,7 +3,7 @@ import styled from "styled-components"
 import { Button } from "grommet"
 
 import Container from "../Layout/Container"
-import { SecondaryTitle } from "../Text/index"
+import { MainTitle } from "../Text/index"
 import Form from "../Form"
 
 const Wrapper = styled.div`
@@ -28,7 +28,7 @@ const DoubleSection = styled.div`
 const CTAWrapper = styled.div`
   flex: 1;
   justify-content: center;
-  padding: 2rem;
+  padding: 2rem 2rem 2rem 0;
 
   @media ${props => props.theme.md} {
     padding-right: 4rem;
@@ -53,10 +53,12 @@ const ActionSection = () => (
     <Wrapper>
       <DoubleSection>
         <CTAWrapper>
-          <SecondaryTitle>expression of interest for small business</SecondaryTitle>
-          <Description>we are working fast to make this a reality. if you believe this is of benefit to you, then please express your interest here.</Description>
-          <Description>we will be posting updates in the next few days on our facebook page. please join our community and keep in touch.</Description>
-          <Button primary label="join our community on facebook" />
+          <MainTitle>a platform supporting small business through COVID19</MainTitle>
+          <Description>local community wants to support local business</Description>
+          <Description>this is a platform to advertise new offers and opening times</Description>
+          <Description>completely free of charge - run by volunteers</Description>
+          <Description>enter your details to be included on the platform</Description>
+          {/* <Button primary label="join our community on facebook" /> */}
         </CTAWrapper>
         <FormWrapper>
           <Form />

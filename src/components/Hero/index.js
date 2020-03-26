@@ -6,6 +6,11 @@ import Container from "../Layout/Container"
 import Hero from "./Hero"
 import Pitch from "./Pitch"
 
+const OuterWrapper = styled.div`
+  width: 100%;
+  background-color: ${({ theme }) => theme.purple};
+`
+
 const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
@@ -19,12 +24,14 @@ const Wrapper = styled.div`
 `
 
 const HeroSection = () => (
-  <Container>
-    <Wrapper>
-      <Hero />
-      <Pitch />
-    </Wrapper>
-  </Container>
+  <OuterWrapper>
+    <Container>
+      <Wrapper>
+        <Hero />
+        <Pitch />
+      </Wrapper>
+    </Container>
+  </OuterWrapper>
 )
 
 Hero.propTypes = {}

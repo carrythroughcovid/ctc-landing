@@ -3,7 +3,7 @@ import React from "react"
 import styled from "styled-components"
 
 // TODO: Replace with proper component
-import ShowcasePlaceholderImage from "../images/placeholder-showcase"
+import Screenshot2 from "../images/screenshot2"
 import Container from "../Layout/Container"
 import { MainTitle } from "../Text/index"
 
@@ -56,20 +56,20 @@ const CounterDescription = styled.span`
   margin-left: 2rem;
 `
 
-const ProgressSection = () => (
+const ScreenSection = () => (
   <OuterWrapper>
     <Container>
       <InnerWrapper>
-        <MainTitle>how?</MainTitle>
+        <MainTitle>join the rest</MainTitle>
         <DoubleSection>
           <Showcase>
             {/* TODO: Replace with proper component */}
             <ImageContainer>
-              <ShowcasePlaceholderImage />
+              <Screenshot2 />
             </ImageContainer>
           </Showcase>
           <CounterWrapper>
-            <Counter>8</Counter>
+            <Counter>43</Counter>
             <CounterDescription>
               local businesses on board so far
             </CounterDescription>
@@ -80,8 +80,8 @@ const ProgressSection = () => (
   </OuterWrapper>
 )
 
-ProgressSection.propTypes = {}
+ScreenSection.propTypes = {}
 
-ProgressSection.defaultProps = {}
+ScreenSection.defaultProps = {}
 
-export default ProgressSection
+export default ScreenSection

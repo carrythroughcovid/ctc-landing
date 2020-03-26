@@ -9,6 +9,7 @@ import {
 } from "grommet"
 
 const businessOptions = ['Restaurant/Cafe','Retail','Other']
+const offeringOptions = ['Online','Takeaway','Delivery','Other']
 
 const FormContainer = styled.div`
   box-shadow: 0px 6px 12px rgba(125, 76, 219, 0.3);
@@ -56,6 +57,9 @@ const Form = () => {
           <FormField name="email" label="Email" ref={register()} />
           <SelectContainer>
             <Select placeholder="Business Type" options={businessOptions} name="businessType" forwardRef={register()} />
+          </SelectContainer>
+          <SelectContainer>
+            <Select placeholder="Offering" options={offeringOptions} name="offeringType" forwardRef={register()} />
           </SelectContainer>
         </FormInputs>
         <ButtonContainer>
