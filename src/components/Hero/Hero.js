@@ -21,9 +21,9 @@ const Subtitle = styled.p`
 
 const Hero = () => (
   <Wrapper>
-    <MainTitle>let's help carry small businesses through covid19</MainTitle>
+    <MainTitle>we're here because we want you to be here</MainTitle>
     <Subtitle>
-      we're building a platform to help small business stay connected with locals during the covid19 pandemic blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah
+      the community wants to support - they just need to be informed
     </Subtitle>
   </Wrapper>
 )

@@ -7,11 +7,11 @@ import { MainTitle } from "../Text/index"
 
 const pitches = [
   {
-    text: "connect businesses with locals",
+    text: "connect businesses to locals",
     icon: <Achievement /> // TODO: Replace with correct icon
   },
   {
-    text: "inform the community on updates of local business offerings",
+    text: "inform community on trading updates and offers",
     icon: <Achievement /> // TODO: Replace with correct icon
   },
   {
@@ -54,7 +54,7 @@ const PitchSection = ({ pitches }) => (
 
 const Pitch = () => (
   <Wrapper>
-    <MainTitle>our mission</MainTitle>
+    <MainTitle>the mission</MainTitle>
     <PitchSection pitches={pitches} />
   </Wrapper>
 )
