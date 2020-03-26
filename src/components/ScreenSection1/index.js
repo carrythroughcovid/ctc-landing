@@ -3,13 +3,12 @@ import React from "react"
 import styled from "styled-components"
 
 // TODO: Replace with proper component
-import ShowcasePlaceholderImage from "../images/placeholder-showcase"
+import Screenshot1 from "../images/screenshot1"
 import Container from "../Layout/Container"
 import { MainTitle } from "../Text/index"
 
 const OuterWrapper = styled.div`
   width: 100%;
-  background-color: ${props => props.theme.secondaryBackground};
 `
 
 const InnerWrapper = styled.div`
@@ -56,32 +55,31 @@ const CounterDescription = styled.span`
   margin-left: 2rem;
 `
 
-const ProgressSection = () => (
+const ScreenSection = () => (
   <OuterWrapper>
     <Container>
       <InnerWrapper>
         <MainTitle>how?</MainTitle>
         <DoubleSection>
+          <CounterWrapper>
+            <CounterDescription>
+              in development is an ios and android app, to get your business into the pockets of as many consumers as possible
+            </CounterDescription>
+          </CounterWrapper>
           <Showcase>
             {/* TODO: Replace with proper component */}
             <ImageContainer>
-              <ShowcasePlaceholderImage />
+              <Screenshot1 />
             </ImageContainer>
           </Showcase>
-          <CounterWrapper>
-            <Counter>8</Counter>
-            <CounterDescription>
-              local businesses on board so far
-            </CounterDescription>
-          </CounterWrapper>
         </DoubleSection>
       </InnerWrapper>
     </Container>
   </OuterWrapper>
 )
 
-ProgressSection.propTypes = {}
+ScreenSection.propTypes = {}
 
-ProgressSection.defaultProps = {}
+ScreenSection.defaultProps = {}
 
-export default ProgressSection
+export default ScreenSection

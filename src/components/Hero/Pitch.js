@@ -8,15 +8,15 @@ import { MainTitle } from "../Text/index"
 const pitches = [
   {
     text: "connect businesses to locals",
-    icon: <Achievement /> // TODO: Replace with correct icon
+    icon: <Achievement color='plain' /> // TODO: Replace with correct icon
   },
   {
     text: "inform community on trading updates and offers",
-    icon: <Achievement /> // TODO: Replace with correct icon
+    icon: <Achievement color='plain'  /> // TODO: Replace with correct icon
   },
   {
     text: "increase accessibility for all: a free platfor, run by local volunteers",
-    icon: <Achievement /> // TODO: Replace with correct icon
+    icon: <Achievement color='plain'  /> // TODO: Replace with correct icon
   },
 ]
 
@@ -54,7 +54,7 @@ const PitchSection = ({ pitches }) => (
 
 const Pitch = () => (
   <Wrapper>
-    <MainTitle>the mission</MainTitle>
+    <MainTitle white>the mission</MainTitle>
     <PitchSection pitches={pitches} />
   </Wrapper>
 )

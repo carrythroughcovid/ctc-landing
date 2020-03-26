@@ -16,12 +16,11 @@ const Wrapper = styled.div`
 `
 
 const Subtitle = styled.p`
-
 `
 
 const Hero = () => (
   <Wrapper>
-    <MainTitle>we're here because we want you to be here</MainTitle>
+    <MainTitle white>get your business in front of locals</MainTitle>
     <Subtitle>
       the community wants to support - they just need to be informed
     </Subtitle>

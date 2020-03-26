@@ -28,7 +28,7 @@ const DoubleSection = styled.div`
 const CTAWrapper = styled.div`
   flex: 1;
   justify-content: center;
-  padding: 2rem;
+  padding: 2rem 2rem 2rem 0;
 
   @media ${props => props.theme.md} {
     padding-right: 4rem;
