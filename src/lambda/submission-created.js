@@ -2,19 +2,35 @@ import fetch from "node-fetch";
 
 exports.handler = async (event, context) => {
   const API_ENDPOINT = "https://api.postmarkapp.com/email/withTemplate";
+  const BUSINESS_TEMPLATE = 17062289
+  const COMMUNITY_TEMPLATE = 17117899
   const json = JSON.parse(event.body)
   const data = json.payload.data
   let { email } = data
-  console.log(json)
-  const businessType = "businessTypeOther" in data ? data.businessTypeOther : data.businessType
-  const offeringType = "offeringTypeOther" in data ? data.offeringTypeOther : data.offeringType
-  const options = {
+  const isBusinessForm = !!data.businessName
+  console.log("DATA: ", data)
+
+  let options = {
     from: 'contact@carrythroughcovid.com',
     to: email,
-    TemplateId: 17062289,
-    TemplateModel: { ...data, businessType, offeringType }
+    TemplateModel: { ...data }
   }
 
+  if (isBusinessForm) {
+    const businessType = "businessTypeOther" in data ? data.businessTypeOther : data.businessType
+    const offeringType = "offeringTypeOther" in data ? data.offeringTypeOther : data.offeringType
+
+    options = {
+      ...options,
+      TemplateId: BUSINESS_TEMPLATE,
+      TemplateModel: { ...options.TemplateModel, businessType, offeringType }
+    }
+  } else {
+    options = {
+      ...options,
+      TemplateId: COMMUNITY_TEMPLATE
+    }
+  }
 
   return fetch(
     API_ENDPOINT,
