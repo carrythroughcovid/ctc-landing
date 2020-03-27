@@ -4,6 +4,7 @@ import styled from "styled-components"
 import LogoImg from "../../images/ctc_logo.svg"
 import Container from "../Layout/Container"
 import { MainTitle } from "../Text/index"
+import CommunityForm from "../../components/Form/CommunityForm"
 
 const OuterWrapper = styled.div`
   width: 100%;
@@ -22,12 +23,19 @@ const FormSection = styled.div`
   width: 100%;
   justify-content: center;
   align-items: center;
+  max-width: 400px;
+  padding-top: 2rem;
 `
 
 const StyledLogo = styled(LogoImg)`
   width: 200px;
   height: 200px;
   transform: translateY(3px);
+  padding-top: 1rem;
+`
+
+const Description = styled.p`
+
 `
 
 const ScreenSection = () => (
@@ -35,9 +43,10 @@ const ScreenSection = () => (
     <Container>
       <InnerWrapper>
         <MainTitle>are you a local community member?</MainTitle>
+        <Description>If you want to support your community, sign up to be notified when we're live!</Description>
         <StyledLogo />
         <FormSection>
-
+          <CommunityForm />
         </FormSection>
       </InnerWrapper>
     </Container>
