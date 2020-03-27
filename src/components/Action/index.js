@@ -35,7 +35,7 @@ const CTAWrapper = styled.div`
   justify-content: center;
 
   @media ${props => props.theme.md} {
-    padding: 2rem 2rem 2rem 4rem;
+    padding: 2rem 4rem 2rem 0rem;
   }
 `
 
