@@ -51,7 +51,7 @@ const Counter = styled.span`
 `
 
 const CounterDescription = styled.span`
-  font-size: 2rem;
+  font-size: 1.5rem;
   margin-left: 2rem;
 `
 
@@ -59,11 +59,11 @@ const ScreenSection = () => (
   <OuterWrapper>
     <Container>
       <InnerWrapper>
-        <MainTitle>how?</MainTitle>
+        <MainTitle>coming soon</MainTitle>
         <DoubleSection>
           <CounterWrapper>
             <CounterDescription>
-              in development is an ios and android app, to get your business into the pockets of as many consumers as possible
+              get your business into the pockets of as many consumers as possible
             </CounterDescription>
           </CounterWrapper>
           <Showcase>

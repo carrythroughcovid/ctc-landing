@@ -2,6 +2,7 @@ import React from "react"
 import styled from "styled-components"
 import { Button } from "grommet"
 
+import LogoImg from "../../images/ctc_logo.svg"
 import Container from "../Layout/Container"
 import { MainTitle } from "../Text/index"
 import Form from "../Form"
@@ -46,6 +47,20 @@ const FormWrapper = styled.div`
 `
 
 const Description = styled.p`
+  padding-top: 0.8rem;
+`
+
+const StyledLogo = styled(LogoImg)`
+  width: 200px;
+  height: 200px;
+  transform: translateY(3px);
+`
+
+const LogoContainer = styled.div`
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding-top: 1rem;
 `
 
 const ActionSection = () => (
@@ -57,6 +72,9 @@ const ActionSection = () => (
           <Description>Local communities want to support their local businesses and need up to date information.</Description>
           <Description>Are you looking to <strong>access local customers</strong> and inform them of what you're offering?</Description>
           <Description>If you have new operating hours, a new online store or delivery option, sign up here."</Description>
+          <LogoContainer>
+            <StyledLogo />
+          </LogoContainer>
 
           {/* <Description>are you:</Description>
           <ul>

@@ -1,8 +1,6 @@
 import React from "react"
 import styled from "styled-components"
 
-import LogoImg from "../../images/ctc_logo.svg"
-
 const ColoredText = styled.span`
   color: ${({ theme }) => theme.purple};
 `
@@ -25,15 +23,8 @@ const SubTitle = styled.div`
   margin-top: 0.5rem;
 `
 
-const StyledLogo = styled(LogoImg)`
-  width: 70px;
-  height: 70px;
-  transform: translateY(3px)
-`
-
 const Logo = () => (
   <Wrapper>
-    <StyledLogo />
     <Title>
       carry<ColoredText>through</ColoredText>covid
     </Title>
