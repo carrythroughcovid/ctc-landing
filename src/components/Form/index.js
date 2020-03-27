@@ -1,6 +1,6 @@
-import React, { useRef } from "react"
+import React, { useRef, useState } from "react"
 import styled from "styled-components"
-import { useForm } from "react-hook-form"
+import { useForm, Controller } from "react-hook-form"
 import {
   Form as GrommetForm,
   FormField,
@@ -41,11 +41,17 @@ const SelectContainer = styled.div`
 
 const Form = () => {
   const formRef = useRef(null)
-  const { register, handleSubmit } = useForm()
+  const { register, handleSubmit, getValues, control } = useForm()
+  const [businessType, setBusinessType] = useState("")
+  const [offeringType, setOfferingType] = useState("")
 
   const onSubmit = () => {
     formRef.current.submit()
   }
+
+  const showOther = field => getValues()[field] && getValues()[field].value === "Other"
+  const showOtherBusiness = () => getValues().businessType && getValues().businessType.value === "Other"
+  const showOtherOffering = () => getValues().offeringType && getValues().offeringType.value === "Other"
 
   return (
     <FormContainer>
@@ -53,14 +59,32 @@ const Form = () => {
         <FormInputs>
           <input type="hidden" name="bot-field" />
           <input type="hidden" name="form-name" value="eoi" />
-          <FormField name="businessName" label="Business Name" ref={register()} />
-          <FormField name="email" label="Email" ref={register()} />
+          <Controller as={<FormField name="businessName" label="Business Name" />} name="businessName" control={control} />
+          <Controller as={<FormField name="email" label="Email" />} name="email" control={control} />
           <SelectContainer>
-            <Select placeholder="Business Type" options={businessOptions} name="businessType" forwardRef={register()} />
+            <Controller
+              as={
+                <Select placeholder="Type of Business" options={businessOptions} name="businessType" />
+              }
+              name="businessType"
+              control={control}
+              onChange={selected => setBusinessType(selected[0].value)}
+            />
           </SelectContainer>
+          {businessType === "Other" && <FormField name="businessTypeOther" placeholder="Type of Business" ref={register()} />}
           <SelectContainer>
-            <Select placeholder="Offering" options={offeringOptions} name="offeringType" forwardRef={register()} />
+            <Controller
+              as={
+                <Select placeholder="Offering" options={offeringOptions} name="offeringType" />
+              }
+              name="offeringType"
+              control={control}
+              onChange={selected => setOfferingType(selected[0].value)}
+            />
           </SelectContainer>
+          {offeringType === "Other" && <FormField name="offeringTypeOther" placeholder="What is your offering?" ref={register()} />}
+          <Controller as={<FormField name="suburb" label="Suburb" />} name="suburb" control={control} />
+          <Controller as={<FormField name="mobile" label="Mobile Number" />} name="mobile" control={control} />
         </FormInputs>
         <ButtonContainer>
           <Button type="submit" label="Submit" />
