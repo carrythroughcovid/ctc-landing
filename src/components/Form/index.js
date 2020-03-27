@@ -49,10 +49,6 @@ const Form = () => {
     formRef.current.submit()
   }
 
-  const showOther = field => getValues()[field] && getValues()[field].value === "Other"
-  const showOtherBusiness = () => getValues().businessType && getValues().businessType.value === "Other"
-  const showOtherOffering = () => getValues().offeringType && getValues().offeringType.value === "Other"
-
   return (
     <FormContainer>
       <StyledForm ref={formRef} name="eoi" method="post" action="/submitted" onSubmit={handleSubmit(onSubmit)} data-netlify="true" data-netlify-honeypot="bot-field">
