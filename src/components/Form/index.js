@@ -67,7 +67,7 @@ const Form = () => {
               onChange={selected => setBusinessType(selected[0].value)}
             />
           </SelectContainer>
-          {businessType === "Other" && <FormField name="businessTypeOther" placeholder="Type of Business" ref={register()} />}
+          {businessType === "Other" && <Controller as={<FormField name="businessTypeOther" placeholder="Type of Business" />} name="businessTypeOther" control={control} />}
           <SelectContainer>
             <Controller
               as={
@@ -78,7 +78,7 @@ const Form = () => {
               onChange={selected => setOfferingType(selected[0].value)}
             />
           </SelectContainer>
-          {offeringType === "Other" && <FormField name="offeringTypeOther" placeholder="What is your offering?" ref={register()} />}
+          {offeringType === "Other" && <Controller as={<FormField name="offeringTypeOther" placeholder="What is your offering?" />} name="offeringTypeOther" control={control} />}
           <Controller as={<FormField name="suburb" label="Suburb" />} name="suburb" control={control} />
           <Controller as={<FormField name="mobile" label="Mobile Number" />} name="mobile" control={control} />
         </FormInputs>

@@ -12,7 +12,7 @@ exports.handler = async (event, context) => {
     from: 'contact@carrythroughcovid.com',
     to: email,
     TemplateId: 17062289,
-    TemplateModel: { ...json.payload.data, businessType, offeringType }
+    TemplateModel: { ...data, businessType, offeringType }
   }
 
 
