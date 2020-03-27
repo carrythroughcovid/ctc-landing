@@ -9,7 +9,7 @@ const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
   flex: 1;
-  padding: 1rem 0;
+  padding: 1rem;
 
   @media ${props => props.theme.md} {
     padding-right: 2rem;

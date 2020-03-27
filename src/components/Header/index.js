@@ -29,7 +29,7 @@ const Header = () => (
         <UnstyledLink to="/">
           <Logo />
         </UnstyledLink>
-        <Button alignSelf="center" primary label="Sign Up" />
+        {/* <Button alignSelf="center" primary label="Sign Up" /> */}
       </InnerWrapper>
     </MaxWidthContainer>
   </OuterWrapper>

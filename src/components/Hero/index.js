@@ -16,7 +16,7 @@ const Wrapper = styled.div`
   flex-direction: column;
   width: 100%;
   justify-content: space-around;
-  padding: 2rem 0;
+  padding-bottom: 2rem;
 
   @media ${props => props.theme.md} {
     flex-direction: row;

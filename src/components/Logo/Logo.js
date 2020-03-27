@@ -13,9 +13,12 @@ const Wrapper = styled.div`
 `
 
 const Title = styled.div`
-  font-size: 2rem;
+  font-size: 1.5rem;
   font-weight: bold;
-  padding-left: 1rem;
+
+  @media ${({ theme }) => theme.md} {
+    font-size: 2rem;
+  }
 `
 
 const SubTitle = styled.div`
