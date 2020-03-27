@@ -55,6 +55,8 @@ const Form = () => {
         <FormInputs>
           <input type="hidden" name="bot-field" />
           <input type="hidden" name="form-name" value="eoi" />
+          <input type="hidden" name="businessTypeOther" value="" />
+          <input type="hidden" name="offeringTypeOther" value="" />
           <Controller as={<FormField name="businessName" label="Business Name" />} name="businessName" control={control} />
           <Controller as={<FormField name="email" label="Email" />} name="email" control={control} />
           <SelectContainer>
