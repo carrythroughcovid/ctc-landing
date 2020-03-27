@@ -16,9 +16,13 @@ exports.handler = async (event, context) => {
     TemplateModel: { ...data }
   }
 
+  const notEmpty = field => (
+    (field in data) && (field !== "")
+  )
+
   if (isBusinessForm) {
-    const businessType = "businessTypeOther" in data ? data.businessTypeOther : data.businessType
-    const offeringType = "offeringTypeOther" in data ? data.offeringTypeOther : data.offeringType
+    const businessType = notEmpty("businessTypeOther") ? data.businessTypeOther : data.businessType
+    const offeringType = notEmpty("offeringTypeOther") ? data.offeringTypeOther : data.offeringType
 
     options = {
       ...options,
