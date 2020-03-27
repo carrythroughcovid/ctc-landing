@@ -13,7 +13,11 @@ const Wrapper = styled.div`
   flex-direction: column;
   width: 100%;
   align-items: center;
-  padding: 2rem 0;
+  padding: 1rem 0;
+
+  @media ${props => props.theme.md} {
+    padding: 2rem 0;
+  }
 `
 
 const DoubleSection = styled.div`
@@ -29,10 +33,9 @@ const DoubleSection = styled.div`
 const CTAWrapper = styled.div`
   flex: 1;
   justify-content: center;
-  padding: 2rem 2rem 2rem 0;
 
   @media ${props => props.theme.md} {
-    padding-right: 4rem;
+    padding: 2rem 2rem 2rem 4rem;
   }
 `
 
