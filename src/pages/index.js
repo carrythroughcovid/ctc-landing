@@ -11,7 +11,7 @@ import Action from "../components/Action"
 import Community from "../components/Community"
 
 const NoMarginSvg = styled.svg`
-  margin-bottom: -5px;
+  margin-bottom: -10px;
 `
 
 const IndexPage = () => (
