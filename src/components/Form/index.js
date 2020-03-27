@@ -1,4 +1,5 @@
 import React, { useRef, useState } from "react"
+import { navigate } from "gatsby"
 import styled from "styled-components"
 import { useForm, Controller } from "react-hook-form"
 import {
@@ -45,8 +46,15 @@ const Form = () => {
   const [businessType, setBusinessType] = useState("")
   const [offeringType, setOfferingType] = useState("")
 
-  const onSubmit = () => {
-    formRef.current.submit()
+  const onSubmit = (data, e) => {
+    e.preventDefault()
+    navigate(
+      "/submitted",
+      {
+        state: { submissionType: "Business" },
+      }
+    )
+    // formRef.current.submit()
   }
 
   return (
