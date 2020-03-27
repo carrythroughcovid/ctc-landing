@@ -17,7 +17,7 @@ const InnerWrapper = styled.div`
   flex-direction: column;
   width: 100%;
   align-items: center;
-  padding: 2rem 0;
+  padding-bottom: 2rem;
 `
 
 const DoubleSection = styled.div`
