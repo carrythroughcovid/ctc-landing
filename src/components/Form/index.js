@@ -68,6 +68,7 @@ const Form = () => {
             />
           </SelectContainer>
           {businessType === "Other" && <Controller as={<FormField name="businessTypeOther" placeholder="Type of Business" />} name="businessTypeOther" control={control} />}
+          <Controller as={<FormField name="test" placeholder="Test field" />} name="test" control={control} />
           <SelectContainer>
             <Controller
               as={
