@@ -4,6 +4,7 @@ import styled from "styled-components"
 import { Achievement } from 'grommet-icons';
 
 import { MainTitle } from "../Text/index"
+import PitchSection from "./Pitches"
 
 const pitches = [
   {
@@ -14,10 +15,10 @@ const pitches = [
     text: "inform community on trading updates and offers",
     icon: <Achievement color='plain'  /> // TODO: Replace with correct icon
   },
-  {
-    text: "increase accessibility for all: a free platfor, run by local volunteers",
-    icon: <Achievement color='plain'  /> // TODO: Replace with correct icon
-  },
+  // {
+  //   text: "increase accessibility for all: a free platfor, run by local volunteers",
+  //   icon: <Achievement color='plain'  /> // TODO: Replace with correct icon
+  // },
 ]
 
 const Wrapper = styled.div`
@@ -29,28 +30,6 @@ const Wrapper = styled.div`
     padding-left: 2rem;
   }
 `
-
-const PitchWrapper = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  padding: 0.25rem 0;
-`
-
-const PitchText = styled.span`
-  margin-left: 1rem;
-`
-
-const PitchItem = ({ text, icon }) => (
-  <PitchWrapper>
-    {icon}
-    <PitchText>{text}</PitchText>
-  </PitchWrapper>
-)
-
-const PitchSection = ({ pitches }) => (
-  pitches.map(({ text, icon }) => <PitchItem text={text} icon={icon} />)
-)
 
 const Pitch = () => (
   <Wrapper>

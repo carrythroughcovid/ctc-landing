@@ -54,10 +54,20 @@ const ActionSection = () => (
       <DoubleSection>
         <CTAWrapper>
           <MainTitle>a platform supporting small business through COVID19</MainTitle>
-          <Description>local community wants to support local business</Description>
-          <Description>this is a platform to advertise new offers and opening times</Description>
-          <Description>completely free of charge - run by volunteers</Description>
-          <Description>enter your details to be included on the platform</Description>
+          <Description>Local communities want to support their local businesses and need up to date information.</Description>
+          <Description>Are you looking to <strong>access local customers</strong> and inform them of what you're offering?</Description>
+          <Description>If you have new operating hours, a new online store or delivery option, sign up here."</Description>
+
+          {/* <Description>are you:</Description>
+          <ul>
+            <li>trying to stay open?</li>
+            <li>changing your offering?</li>
+            <li>moving online?</li>
+            <li>doing special offers or discounts?</li>
+          </ul>
+          <Description>we're here to spread the word to your community!</Description> */}
+          {/* <Description>completely free of charge - run by volunteers</Description>
+          <Description>enter your details to be included on the platform</Description> */}
           {/* <Button primary label="join our community on facebook" /> */}
         </CTAWrapper>
         <FormWrapper>
