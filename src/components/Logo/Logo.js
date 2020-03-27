@@ -7,14 +7,15 @@ const ColoredText = styled.span`
 
 const Wrapper = styled.div`
   display: flex;
-  flex-direction: column;
-  align-items: flex-start;
+  /* flex-direction: column; */
+  align-items: center;
   color: ${props => props.theme.brandText};
 `
 
 const Title = styled.div`
   font-size: 2rem;
   font-weight: bold;
+  padding-left: 1rem;
 `
 
 const SubTitle = styled.div`
@@ -27,9 +28,9 @@ const Logo = () => (
     <Title>
       carry<ColoredText>through</ColoredText>covid
     </Title>
-    <SubTitle>
+    {/* <SubTitle>
       connecting YOUR business to YOUR community
-    </SubTitle>
+    </SubTitle> */}
   </Wrapper>
 )
 

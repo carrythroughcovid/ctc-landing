@@ -1,0 +1,8 @@
+    <svg width="100%" viewBox="0 0 10 1">
+      <polygon
+        stroke="none"
+        stroke-width="0"
+        fill="#7D4CDB"
+        points="0,0 0,1 10,0.6 10,0"
+      />
+    </svg>

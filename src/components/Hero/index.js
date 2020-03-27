@@ -27,8 +27,8 @@ const HeroSection = () => (
   <OuterWrapper>
     <Container>
       <Wrapper>
-        <Hero />
         <Pitch />
+        <Hero />
       </Wrapper>
     </Container>
   </OuterWrapper>

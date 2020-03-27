@@ -8,9 +8,10 @@ import Progress from "../components/Progress"
 import ScreenSection1 from "../components/ScreenSection1"
 import ScreenSection2 from "../components/ScreenSection2"
 import Action from "../components/Action"
+import Community from "../components/Community"
 
 const NoMarginSvg = styled.svg`
-  margin-bottom: -10px;
+  margin-bottom: -35px;
 `
 
 const IndexPage = () => (
@@ -44,6 +45,15 @@ const IndexPage = () => (
       />
     </NoMarginSvg>
     <ScreenSection2 />
+    <svg width="100%" viewBox="0 0 10 1">
+      <polygon
+        stroke="none"
+        stroke-width="0"
+        fill="#CDCDCD"
+        points="0,0 0,0.6 10,1 10,0"
+      />
+    </svg>
+    <Community />
   </Layout>
 )
 
