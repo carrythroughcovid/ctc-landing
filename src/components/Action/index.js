@@ -71,10 +71,10 @@ const ActionSection = () => (
           <MainTitle>a platform supporting small business through COVID19</MainTitle>
           <Description>Local communities want to support their local businesses and need up to date information.</Description>
           <Description>Are you looking to <strong>access local customers</strong> and inform them of what you're offering?</Description>
-          <Description>If you have new operating hours, a new online store or delivery option, sign up here."</Description>
-          <LogoContainer>
+          <Description>If you have new operating hours, a new online store or delivery option, or something you'd like to share with the community, sign up for early access.</Description>
+          {/* <LogoContainer>
             <StyledLogo />
-          </LogoContainer>
+          </LogoContainer> */}
 
           {/* <Description>are you:</Description>
           <ul>

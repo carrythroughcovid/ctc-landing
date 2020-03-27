@@ -43,16 +43,14 @@ const ImageContainer = styled.div`
 const CounterWrapper = styled.div`
   flex: 1;
   display: flex;
-  align-items: center;
-`
-
-const Counter = styled.span`
-  font-size: 5rem;
+  flex-direction: column;
+  justify-content: center;
 `
 
 const CounterDescription = styled.span`
   font-size: 1.5rem;
   margin-left: 2rem;
+  padding-top: 3rem;
 `
 
 const ScreenSection = () => (
@@ -63,7 +61,10 @@ const ScreenSection = () => (
         <DoubleSection>
           <CounterWrapper>
             <CounterDescription>
-              get your business into the pockets of as many consumers as possible
+              get your business <strong>into the pockets</strong> of as many consumers as possible
+            </CounterDescription>
+            <CounterDescription>
+              provide <strong>updates</strong>, <strong>offers</strong> and tell <strong>your story</strong>
             </CounterDescription>
           </CounterWrapper>
           <Showcase>

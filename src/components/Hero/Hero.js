@@ -22,7 +22,7 @@ const pitches = [
     icon: <Achievement color='plain' /> // TODO: Replace with correct icon
   },
   {
-    text: "building an iOS and android app",
+    text: "building a community",
     icon: <Achievement color='plain'  /> // TODO: Replace with correct icon
   },
   // {

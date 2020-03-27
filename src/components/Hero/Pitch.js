@@ -12,7 +12,7 @@ const pitches = [
     icon: <Achievement color='plain' /> // TODO: Replace with correct icon
   },
   {
-    text: "inform community on trading updates and offers",
+    text: "inform community on trading updates",
     icon: <Achievement color='plain'  /> // TODO: Replace with correct icon
   },
   // {

@@ -13,7 +13,8 @@ const StyledFooter = styled.footer`
 
 const Footer = ({ siteTitle }) => (
   <StyledFooter>
-    {new Date().getFullYear()} &copy; {siteTitle}
+    {/* {new Date().getFullYear()} &copy; {siteTitle} */}
+    Questions or feedback? We'd love to hear from you: <a href="mailto:contact@carrythroughcovid.com">contact@carrythroughcovid.com</a>
   </StyledFooter>
 )
 

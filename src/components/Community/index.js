@@ -31,7 +31,7 @@ const StyledLogo = styled(LogoImg)`
   width: 200px;
   height: 200px;
   transform: translateY(3px);
-  padding-top: 1rem;
+  padding-top: 2rem;
 `
 
 const Description = styled.p`
@@ -44,10 +44,10 @@ const ScreenSection = () => (
       <InnerWrapper>
         <MainTitle>are you a local community member?</MainTitle>
         <Description>If you want to support your community, sign up to be notified when we're live!</Description>
-        <StyledLogo />
         <FormSection>
           <CommunityForm />
         </FormSection>
+        <StyledLogo />
       </InnerWrapper>
     </Container>
   </OuterWrapper>
