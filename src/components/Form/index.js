@@ -65,9 +65,9 @@ const Form = () => {
     <FormContainer>
       <StyledForm
         ref={formRef}
-        name="eoi"
+        name="businessForm"
         method="post"
-        action="/submitted"
+        action="/submitted_business"
         onSubmit={handleSubmit(onSubmit)}
         data-netlify="true"
         data-netlify-honeypot="bot-field"
