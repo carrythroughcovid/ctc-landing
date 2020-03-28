@@ -4,8 +4,8 @@ import styled, { css } from "styled-components"
 import { useForm, Controller } from "react-hook-form"
 import { Form as GrommetForm, FormField, Button, Select, ThemeContext } from "grommet"
 
-const businessOptions = ["Restaurant/Cafe", "Retail", "Other"]
-const offeringOptions = ["Online", "Takeaway", "Delivery", "Other"]
+const businessOptions = ["Hospitality", "Retail", "Services", "Other"]
+const offeringOptions = ["Online Store", "Takeaway/Delivery", "Delivery", "Discounts", "Virtual Services", "Pre-purchased Store Credit", "Other"]
 
 const EMAIL_REGEX = /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i
 
