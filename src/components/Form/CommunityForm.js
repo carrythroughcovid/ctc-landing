@@ -58,7 +58,7 @@ const Form = () => {
       >
         <FormInputs>
           <input type="hidden" name="bot-field" />
-          <input type="hidden" name="form-name" value="eoi" />
+          <input type="hidden" name="form-name" value="communityForm" />
           <Controller
             as={<FormField name="name" label="Name" error={errors.name && errors.name.message} />}
             name="name"
