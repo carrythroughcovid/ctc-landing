@@ -37,6 +37,10 @@ function SEO({ description, lang, meta, title }) {
           content: title,
         },
         {
+          property: `og:image`,
+          content: "https://carrythroughcovid.s3-ap-southeast-2.amazonaws.com/ctc_facebook.png",
+        },
+        {
           property: `og:description`,
           content: metaDescription,
         },
