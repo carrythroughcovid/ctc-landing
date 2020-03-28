@@ -7,7 +7,7 @@ exports.handler = async (event, context) => {
   const json = JSON.parse(event.body)
   const data = json.payload.data
   let { email } = data
-  const isBusinessForm = !!data.businessName
+  const isBusinessForm = "businessName" in data
   console.log("DATA: ", data)
 
   let options = {
