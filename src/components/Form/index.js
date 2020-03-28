@@ -195,7 +195,7 @@ const Form = () => {
                       label={offering.label}
                     />
                   }
-                  name={`offeringType-${i}-${offering.value}`}
+                  name={`offeringType-${offering.value}`}
                   control={control}
                   onChange={selected => {
                     const { currentTarget: current } = selected[0]

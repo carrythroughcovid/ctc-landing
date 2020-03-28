@@ -23,11 +23,17 @@ exports.handler = async (event, context) => {
   if (isBusinessForm) {
     const businessType = notEmpty("businessTypeOther") ? data.businessTypeOther : data.businessType
     const offeringType = notEmpty("offeringTypeOther") ? data.offeringTypeOther : data.offeringType
+    const selectedOfferingKeys = Object.keys(data).filter(key => (key.includes("offeringType")) && (data[key] === "true"))
+    const selectedOfferings = selectedOfferingKeys.map(offering => offering.split("-")[1])
+    const formattedOfferings = [
+      ...selectedOfferings.map(offering => `${offering.charAt(0).toUpperCase()}${offering.substring(1)}`),
+      offeringType
+    ]
 
     options = {
       ...options,
       TemplateId: BUSINESS_TEMPLATE,
-      TemplateModel: { ...options.TemplateModel, businessType, offeringType }
+      TemplateModel: { ...options.TemplateModel, businessType, offeringType: formattedOfferings }
     }
   } else {
     options = {
