@@ -85,7 +85,7 @@ const Form = () => {
         <FormInputs>
           {/* Netlify spam protection */}
           <input type="hidden" name="bot-field" />
-          <input type="hidden" name="form-name" value="eoi" />
+          <input type="hidden" name="form-name" value="businessForm" />
           {/* So that netlify can register the fields that aren't initially displayed */}
           <input type="hidden" name="businessTypeOther" value="" />
           <input type="hidden" name="offeringTypeOther" value="" />
