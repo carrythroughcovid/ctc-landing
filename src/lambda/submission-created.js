@@ -28,7 +28,7 @@ exports.handler = async (event, context) => {
     const formattedOfferings = [
       ...selectedOfferings.map(offering => `${offering.charAt(0).toUpperCase()}${offering.substring(1)}`),
       offeringType
-    ]
+    ].join(", ")
 
     options = {
       ...options,
