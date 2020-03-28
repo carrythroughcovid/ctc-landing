@@ -54,10 +54,7 @@ const Form = () => {
   const [offeringType, setOfferingType] = useState("")
 
   const onSubmit = (_, e) => {
-    e.preventDefault()
-    navigate("/submitted", {
-      state: { submissionType: "Business" },
-    })
+    formRef.current.submit()
   }
 
   const backgroundColor = (errors) => (
