@@ -52,7 +52,7 @@ const SubmittedPage = () => (
       <p>We are also on Instagram. Message us if you'd like to be featured :)</p>
       <SocialContainer>
         <InstagramLogo />
-        <SocialLink target="_blank" href="https://instagram.com">instagram.com</SocialLink>
+        <SocialLink target="_blank" href="https://instagram.com/carrythroughcovid">instagram/carrythroughcovid.com</SocialLink>
       </SocialContainer>
       <ButtonContainer>
         <Button onClick={() => navigate("/")} label="Back" />
