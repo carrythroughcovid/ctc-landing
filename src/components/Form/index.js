@@ -26,6 +26,10 @@ const StyledForm = styled(GrommetForm)`
   }
 `
 
+const StyledFormField = styled(FormField)`
+  margin-top: 1rem;
+`
+
 const FormInputs = styled.div`
   max-width: 18rem;
 `
@@ -81,7 +85,7 @@ const Form = () => {
           <input type="hidden" name="offeringTypeOther" value="" />
           <Controller
             as={
-              <FormField
+              <StyledFormField
                 name="businessName"
                 label="Business Name"
                 error={errors.businessName && errors.businessName.message}
@@ -96,7 +100,7 @@ const Form = () => {
           />
           <Controller
             as={
-              <FormField
+              <StyledFormField
                 name="email"
                 label="Email"
                 error={errors.email && errors.email.message}
@@ -133,7 +137,7 @@ const Form = () => {
           {businessType === "Other" && (
             <Controller
               as={
-                <FormField
+                <StyledFormField
                   name="businessTypeOther"
                   placeholder="Type of Business"
                 />
@@ -169,7 +173,7 @@ const Form = () => {
           {offeringType === "Other" && (
             <Controller
               as={
-                <FormField
+                <StyledFormField
                   name="offeringTypeOther"
                   placeholder="What is your offering?"
                 />
@@ -182,7 +186,7 @@ const Form = () => {
             />
           )}
           <Controller
-            as={<FormField name="suburb" label="Suburb" />}
+            as={<StyledFormField name="suburb" label="Suburb" />}
             name="suburb"
             control={control}
             rules={{
@@ -190,7 +194,7 @@ const Form = () => {
             }}
           />
           <Controller
-            as={<FormField name="mobile" label="Mobile Number" />}
+            as={<StyledFormField name="mobile" label="Mobile Number" />}
             name="mobile"
             control={control}
             rules={{
