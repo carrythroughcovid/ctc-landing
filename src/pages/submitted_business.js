@@ -37,13 +37,13 @@ const ButtonContainer = styled.div`
   padding-top: 2rem;
 `
 
-const SubmittedPage = ({ location }) => (
+const SubmittedPage = () => (
   <Layout>
     <SEO title="Submitted!" />
     <Container>
-      {console.log("submissionType", location.state && location.state.submissionType)}
-      <MainTitle>Thanks for submitting!</MainTitle>
+      <MainTitle>Thanks for submitting your business!</MainTitle>
       <p>We will be in touch very shortly.</p>
+      <p>Do you know other businesses looking for a helping hand? Please get them involved.</p>
       <p>Have you seen the Facebook community? Join up to get a headstart on advertising there!</p>
       <SocialContainer>
         <FacebookLogo />
