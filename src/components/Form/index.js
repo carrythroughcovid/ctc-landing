@@ -91,6 +91,7 @@ const Form = () => {
             control={control}
             rules={{
               required: { value: true, message: "Business name is required" },
+              maxLength: { value: 200, message: "Business name is too long" }
             }}
           />
           <Controller
@@ -104,7 +105,8 @@ const Form = () => {
             name="email"
             control={control}
             rules={{
-              required: { value: true, message: "Email is required" }, pattern: { value: EMAIL_REGEX, message: "Please enter a valid email" }
+              required: { value: true, message: "Email is required" }, pattern: { value: EMAIL_REGEX, message: "Please enter a valid email" },
+              maxLength: { value: 200, message: "Email is too long" }
             }}
           />
           <SelectContainer>
@@ -138,6 +140,9 @@ const Form = () => {
               }
               name="businessTypeOther"
               control={control}
+              rules={{
+                maxLength: { value: 200, message: "Business type is too long" }
+              }}
             />
           )}
           <SelectContainer>
@@ -171,17 +176,26 @@ const Form = () => {
               }
               name="offeringTypeOther"
               control={control}
+              rules={{
+                maxLength: { value: 200, message: "Offering type is too long" }
+              }}
             />
           )}
           <Controller
             as={<FormField name="suburb" label="Suburb" />}
             name="suburb"
             control={control}
+            rules={{
+              maxLength: { value: 50, message: "Suburb is too long" }
+            }}
           />
           <Controller
             as={<FormField name="mobile" label="Mobile Number" />}
             name="mobile"
             control={control}
+            rules={{
+              maxLength: { value: 15, message: "Mobile is too long" }
+            }}
           />
         </FormInputs>
         <ButtonContainer>
