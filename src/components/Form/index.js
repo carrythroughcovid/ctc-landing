@@ -90,7 +90,7 @@ const Form = () => {
   const formRef = useRef(null)
   const { handleSubmit, control, errors, clearError } = useForm()
   const [businessType, setBusinessType] = useState("")
-  const [offeringType, setOfferingType] = useState("")
+  const [otherOfferingChecked, setOtherOfferingChecked] = useState(false)
 
   const onSubmit = (_, e) => {
     formRef.current.submit()
@@ -198,8 +198,11 @@ const Form = () => {
                   name={`offeringType-${i}-${offering.value}`}
                   control={control}
                   onChange={selected => {
-                    console.log(selected[0].currentTarget.checked)
-                    return `${selected[0].currentTarget.checked}`
+                    const { currentTarget: current } = selected[0]
+                    if(current.name.match(/offeringType.+other/g)) {
+                      setOtherOfferingChecked(current.checked)
+                    }
+                    return `${current.checked}`
                   }}
                   // rules={{
                   //   required: { value: true, message: "Please let us know what you're offering" },
@@ -209,12 +212,12 @@ const Form = () => {
               ))}
             </BorderlessFormField>
           </SelectContainer>
-          {offeringType === "Other" && (
+          {otherOfferingChecked && (
             <Controller
               as={
-                <StyledFormField
+                <FormField
                   name="offeringTypeOther"
-                  placeholder="What is your offering?"
+                  placeholder="Other offering"
                 />
               }
               name="offeringTypeOther"
