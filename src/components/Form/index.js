@@ -5,7 +5,36 @@ import { useForm, Controller } from "react-hook-form"
 import { Form as GrommetForm, FormField, Button, Select, CheckBox } from "grommet"
 
 const businessOptions = ["Hospitality", "Retail", "Services", "Other"]
-const offeringOptions = ["Online Store", "Takeaway/Delivery", "Delivery", "Discounts", "Virtual Services", "Pre-purchased Store Credit", "Other"]
+const offeringOptions = [
+  {
+    label: "Online Store",
+    value: "online",
+  },
+  {
+    label: "Takeaway",
+    value: "takeaway",
+  },
+  {
+    label: "Delivery",
+    value: "delivery",
+  },
+  {
+    label: "Discounts",
+    value: "discounts",
+  },
+  {
+    label: "Virtual Services",
+    value: "virtual",
+  },
+  {
+    label: "Pre-purchased Store Credit",
+    value: "credit",
+  },
+  {
+    label: "Other",
+    value: "other",
+  },
+]
 
 const EMAIL_REGEX = /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i
 
@@ -163,14 +192,14 @@ const Form = () => {
                   as={
                     <CheckBox
                       name="offeringType"
-                      label={offering}
+                      label={offering.label}
                     />
                   }
-                  name={`offeringType-${i}`}
+                  name={`offeringType-${i}-${offering.value}`}
                   control={control}
                   onChange={selected => {
                     console.log(selected[0].currentTarget.checked)
-                    return selected[0].currentTarget.checked
+                    return `${selected[0].currentTarget.checked}`
                   }}
                   // rules={{
                   //   required: { value: true, message: "Please let us know what you're offering" },
