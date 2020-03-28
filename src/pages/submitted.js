@@ -11,7 +11,7 @@ const SubmittedPage = ({ location }) => (
   <Layout>
     <SEO title="Submitted!" />
     <Container>
-      {console.log("submissionType", location.state.submissionType)}
+      {console.log("submissionType", location.state && location.state.submissionType)}
       <MainTitle>Thanks for submitting!</MainTitle>
       <p>We will be in touch very shortly. Until then feel free to join our Facebook group or follow us on Instagram!</p>
     </Container>
