@@ -2,7 +2,7 @@ import React, { useRef, useState } from "react"
 import { navigate } from "gatsby"
 import styled, { css } from "styled-components"
 import { useForm, Controller } from "react-hook-form"
-import { Form as GrommetForm, FormField, Button, Select, ThemeContext } from "grommet"
+import { Form as GrommetForm, FormField, Button, Select, CheckBox } from "grommet"
 
 const businessOptions = ["Hospitality", "Retail", "Services", "Other"]
 const offeringOptions = ["Online Store", "Takeaway/Delivery", "Delivery", "Discounts", "Virtual Services", "Pre-purchased Store Credit", "Other"]
@@ -51,6 +51,12 @@ const ErrorMessage = styled.p`
   font-size: 0.75rem;
 `
 
+const BorderlessFormField = styled(FormField)`
+  > div {
+    border: none;
+  }
+`
+
 const Form = () => {
   const formRef = useRef(null)
   const { handleSubmit, control, errors, clearError } = useForm()
@@ -89,12 +95,13 @@ const Form = () => {
                 name="businessName"
                 label="Business Name"
                 error={errors.businessName && errors.businessName.message}
+                required="true"
               />
             }
             name="businessName"
             control={control}
             rules={{
-              required: { value: true, message: "Business name is required" },
+              // required: { value: true, message: "Business name is required" },
               maxLength: { value: 200, message: "Business name is too long" }
             }}
           />
@@ -150,25 +157,28 @@ const Form = () => {
             />
           )}
           <SelectContainer>
-            <Controller
-              as={
-                <Select
-                  placeholder="Offering"
-                  options={offeringOptions}
-                  name="offeringType"
+            <BorderlessFormField label="Offering" pad="true">
+              {offeringOptions.map((offering, i) => (
+                <Controller
+                  as={
+                    <CheckBox
+                      name="offeringType"
+                      label={offering}
+                    />
+                  }
+                  name={`offeringType-${i}`}
+                  control={control}
+                  onChange={selected => {
+                    console.log(selected[0].currentTarget.checked)
+                    return selected[0].currentTarget.checked
+                  }}
+                  // rules={{
+                  //   required: { value: true, message: "Please let us know what you're offering" },
+                  // }}
                 />
-              }
-              name="offeringType"
-              control={control}
-              onChange={selected => {
-                setOfferingType(selected[0].value)
-                return selected[0].value
-              }}
-              rules={{
-                required: { value: true, message: "Please let us know what you're offering" },
-              }}
-            />
-            {errors.offeringType && <ErrorMessage>{errors.offeringType.message}</ErrorMessage>}
+                // {errors.offeringType && <ErrorMessage>{errors.offeringType.message}</ErrorMessage>}
+              ))}
+            </BorderlessFormField>
           </SelectContainer>
           {offeringType === "Other" && (
             <Controller
