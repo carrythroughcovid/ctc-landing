@@ -17,7 +17,7 @@ exports.handler = async (event, context) => {
   }
 
   const notEmpty = field => (
-    (field in data) && (field !== "")
+    (field in data) && (data[field] !== "")
   )
 
   if (isBusinessForm) {
