@@ -39,7 +39,7 @@ const Description = styled.p`
 `
 
 const ScreenSection = () => (
-  <OuterWrapper>
+  <OuterWrapper id="community">
     <Container>
       <InnerWrapper>
         <MainTitle>are you a local community member?</MainTitle>

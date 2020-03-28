@@ -44,10 +44,10 @@ const SubmittedPage = () => (
       <MainTitle>Thanks for submitting your business!</MainTitle>
       <p>We will be in touch very shortly.</p>
       <p>Do you know other businesses looking for a helping hand? Please get them involved.</p>
-      <p>Have you seen the Facebook community? Join up to get a headstart on advertising there!</p>
+      <p>Have you liked our facebook page?</p>
       <SocialContainer>
         <FacebookLogo />
-        <SocialLink target="_blank" href="https://facebook.com">facebook.com</SocialLink>
+        <SocialLink target="_blank" href="https://fb.me/carrythroughcovid">https://fb.me/carrythroughcovid</SocialLink>
       </SocialContainer>
       <p>We are also on Instagram. Message us if you'd like to be featured :)</p>
       <SocialContainer>

@@ -63,7 +63,11 @@ const LogoContainer = styled.div`
   width: 100%;
   display: flex;
   justify-content: center;
-  padding-top: 1rem;
+  padding-bottom: 1rem;
+
+  @media ${props => props.theme.md} {
+    justify-content: flex-start;
+  }
 `
 
 const ActionSection = () => (
@@ -71,13 +75,22 @@ const ActionSection = () => (
     <Wrapper>
       <DoubleSection>
         <CTAWrapper>
+          <LogoContainer>
+            <StyledLogo />
+          </LogoContainer>
           <MainTitle>a platform supporting small business through COVID19</MainTitle>
           <Description>Local communities want to support their local businesses and need up to date information.</Description>
           <Description>Are you looking to <strong>access local customers</strong> and inform them of what you're offering?</Description>
-          <Description>If you have new operating hours, a new online store or delivery option, or something you'd like to share with the community, sign up for early access.</Description>
-          {/* <LogoContainer>
-            <StyledLogo />
-          </LogoContainer> */}
+          {/* <Description>If you have new operating hours, a new online store or delivery option, or something you'd like to share with the community, sign up for early access.</Description> */}
+          <Description>Sign up if your business has:
+            <ul>
+              <li>A new online store or delivery option</li>
+              <li>Discounts</li>
+              <li>Virtual services</li>
+              <li>Pre-purchased credit options</li>
+              <li>Any updates to share with your community</li>
+            </ul>
+          </Description>
 
           {/* <Description>are you:</Description>
           <ul>
