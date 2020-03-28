@@ -46,7 +46,7 @@ const SubmittedPage = () => (
       <p>Have you seen the Facebook community? Join up to get a headstart on advertising there!</p>
       <SocialContainer>
         <FacebookLogo />
-        <SocialLink target="_blank" href="https://facebook.com">facebook.com</SocialLink>
+        <SocialLink target="_blank" href="https://fb.me/carrythroughcovid">https://fb.me/carrythroughcovid</SocialLink>
       </SocialContainer>
       <p>We are also on Instagram. Message us if you'd like to be featured :)</p>
       <SocialContainer>
