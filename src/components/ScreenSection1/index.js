@@ -57,7 +57,7 @@ const ScreenSection = () => (
   <OuterWrapper>
     <Container>
       <InnerWrapper>
-        <MainTitle>coming soon</MainTitle>
+        <MainTitle>Coming soon</MainTitle>
         <DoubleSection>
           <CounterWrapper>
             <CounterDescription>

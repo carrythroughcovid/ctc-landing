@@ -60,7 +60,7 @@ const ScreenSection = () => (
   <OuterWrapper>
     <Container>
       <InnerWrapper>
-        <MainTitle>join the rest</MainTitle>
+        <MainTitle>Join the rest</MainTitle>
         <DoubleSection>
           <Showcase>
             {/* TODO: Replace with proper component */}

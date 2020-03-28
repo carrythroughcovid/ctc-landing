@@ -9,11 +9,16 @@ const Wrapper = styled.div`
   display: flex;
   /* flex-direction: column; */
   align-items: center;
+  transform: translateY(1px);
   color: ${props => props.theme.brandText};
+
+  @media ${({ theme }) => theme.md} {
+    transform: translateY(-1px);
+  }
 `
 
 const Title = styled.div`
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   font-weight: bold;
 
   @media ${({ theme }) => theme.md} {

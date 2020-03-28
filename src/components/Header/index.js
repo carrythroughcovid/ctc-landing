@@ -22,6 +22,16 @@ const UnstyledLink = styled(Link)`
   text-decoration: none;
 `
 
+const StyledButton = styled(Button)`
+  font-size: 0.8rem;
+  padding: 0.1rem 0.4rem;
+
+  @media ${({ theme }) => theme.md} {
+    font-size: 1rem;
+    padding: 0.2rem 1rem;
+  }
+`
+
 const Header = () => (
   <OuterWrapper>
     <MaxWidthContainer>
@@ -29,7 +39,7 @@ const Header = () => (
         <UnstyledLink to="/">
           <Logo />
         </UnstyledLink>
-        {/* <Button alignSelf="center" primary label="Sign Up" /> */}
+        <a href="#community"><StyledButton alignSelf="center" primary label="Community Support" /></a>
       </InnerWrapper>
     </MaxWidthContainer>
   </OuterWrapper>

@@ -8,11 +8,11 @@ import PitchSection from "./Pitches"
 
 const pitches = [
   {
-    text: "connect businesses to locals",
+    text: "Connect businesses to locals",
     icon: <Achievement color='plain' /> // TODO: Replace with correct icon
   },
   {
-    text: "inform community on trading updates",
+    text: "Inform community on trading updates",
     icon: <Achievement color='plain'  /> // TODO: Replace with correct icon
   },
   // {
@@ -33,7 +33,7 @@ const Wrapper = styled.div`
 
 const Pitch = () => (
   <Wrapper>
-    <MainTitle white>the mission</MainTitle>
+    <MainTitle white>The mission</MainTitle>
     <PitchSection pitches={pitches} />
   </Wrapper>
 )

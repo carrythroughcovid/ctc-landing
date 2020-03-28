@@ -42,7 +42,7 @@ const ScreenSection = () => (
   <OuterWrapper id="community">
     <Container>
       <InnerWrapper>
-        <MainTitle>are you a local community member?</MainTitle>
+        <MainTitle>Are you a local community member?</MainTitle>
         <Description>If you want to support your community, sign up to be notified when we're live!</Description>
         <FormSection>
           <CommunityForm />

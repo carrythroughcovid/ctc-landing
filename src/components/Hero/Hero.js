@@ -18,11 +18,11 @@ const Wrapper = styled.div`
 
 const pitches = [
   {
-    text: "completely free of charge",
+    text: "Completely free of charge",
     icon: <Achievement color='plain' /> // TODO: Replace with correct icon
   },
   {
-    text: "building a community",
+    text: "Building a community",
     icon: <Achievement color='plain'  /> // TODO: Replace with correct icon
   },
   // {
@@ -33,7 +33,7 @@ const pitches = [
 
 const Hero = () => (
   <Wrapper>
-    <MainTitle white>we are</MainTitle>
+    <MainTitle white>We are</MainTitle>
     <PitchSection pitches={pitches} />
   </Wrapper>
 )
