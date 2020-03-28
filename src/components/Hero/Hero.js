@@ -1,6 +1,6 @@
 import React from "react"
 import styled from "styled-components"
-import { Achievement } from 'grommet-icons';
+import { Currency, Favorite } from 'grommet-icons';
 
 import { MainTitle } from "../Text/index"
 import PitchSection from "./Pitches"
@@ -19,11 +19,11 @@ const Wrapper = styled.div`
 const pitches = [
   {
     text: "Completely free of charge",
-    icon: <Achievement color='plain' /> // TODO: Replace with correct icon
+    icon: <Currency color='plain' /> // TODO: Replace with correct icon
   },
   {
-    text: "Building a community",
-    icon: <Achievement color='plain'  /> // TODO: Replace with correct icon
+    text: "Run by volunteers",
+    icon: <Favorite color='plain'  /> // TODO: Replace with correct icon
   },
   // {
   //   text: "",

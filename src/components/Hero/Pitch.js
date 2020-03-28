@@ -1,19 +1,19 @@
 import PropTypes from "prop-types"
 import React from "react"
 import styled from "styled-components"
-import { Achievement } from 'grommet-icons';
+import { Achievement, Nodes } from 'grommet-icons';
 
 import { MainTitle } from "../Text/index"
 import PitchSection from "./Pitches"
 
 const pitches = [
   {
-    text: "Connect businesses to locals",
+    text: "Keep small businesses afloat",
     icon: <Achievement color='plain' /> // TODO: Replace with correct icon
   },
   {
-    text: "Inform community on trading updates",
-    icon: <Achievement color='plain'  /> // TODO: Replace with correct icon
+    text: "Enable community support through technology",
+    icon: <Nodes color='plain'  /> // TODO: Replace with correct icon
   },
   // {
   //   text: "increase accessibility for all: a free platfor, run by local volunteers",

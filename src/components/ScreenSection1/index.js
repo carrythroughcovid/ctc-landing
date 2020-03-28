@@ -61,7 +61,7 @@ const ScreenSection = () => (
         <DoubleSection>
           <CounterWrapper>
             <CounterDescription>
-              Get your business <strong>into the pockets</strong> of as many consumers as possible.
+              Get your business <strong>into the pockets</strong> of the community.
             </CounterDescription>
             <CounterDescription>
               Provide <strong>updates</strong>, <strong>offers</strong> and tell <strong>your story</strong>.
