@@ -19,11 +19,11 @@ const Wrapper = styled.div`
 const pitches = [
   {
     text: "Completely free of charge",
-    icon: <Currency color='plain' /> // TODO: Replace with correct icon
+    icon: <Currency color='white' /> // TODO: Replace with correct icon
   },
   {
     text: "Run by volunteers",
-    icon: <Favorite color='plain'  /> // TODO: Replace with correct icon
+    icon: <Favorite color='white'  /> // TODO: Replace with correct icon
   },
   // {
   //   text: "",

@@ -6,6 +6,7 @@ const PitchWrapper = styled.div`
   align-items: center;
   justify-content: flex-start;
   padding: 0.25rem 0;
+  color: white;
 `
 
 const PitchText = styled.span`

@@ -9,11 +9,11 @@ import PitchSection from "./Pitches"
 const pitches = [
   {
     text: "Keep small businesses afloat",
-    icon: <Achievement color='plain' /> // TODO: Replace with correct icon
+    icon: <Achievement color='white' /> // TODO: Replace with correct icon
   },
   {
     text: "Enable community support through technology",
-    icon: <Nodes color='plain'  /> // TODO: Replace with correct icon
+    icon: <Nodes color='white'  /> // TODO: Replace with correct icon
   },
   // {
   //   text: "increase accessibility for all: a free platfor, run by local volunteers",
