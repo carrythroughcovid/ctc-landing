@@ -228,7 +228,7 @@ const Form = () => {
             />
           )}
           <Controller
-            as={<StyledFormField name="suburb" label="Suburb" />}
+            as={<StyledFormField name="suburb" label="Suburb (optional)" />}
             name="suburb"
             control={control}
             rules={{
@@ -236,7 +236,7 @@ const Form = () => {
             }}
           />
           <Controller
-            as={<StyledFormField name="mobile" label="Mobile Number" />}
+            as={<StyledFormField name="mobile" label="Mobile Number (optional)" />}
             name="mobile"
             control={control}
             rules={{
