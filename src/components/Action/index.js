@@ -75,9 +75,9 @@ const ActionSection = () => (
     <Wrapper>
       <DoubleSection>
         <CTAWrapper>
-          <LogoContainer>
+          {/* <LogoContainer>
             <StyledLogo />
-          </LogoContainer>
+          </LogoContainer> */}
           <MainTitle>A platform supporting small business through COVID19</MainTitle>
           {/* <Description>Local communities want to support their local businesses and need up to date information.</Description> */}
           <Description>Are you looking to <strong>access local customers</strong> and inform them of what you're offering?</Description>

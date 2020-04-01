@@ -47,7 +47,7 @@ const ScreenSection = () => (
         <FormSection>
           <CommunityForm />
         </FormSection>
-        <StyledLogo />
+        {/* <StyledLogo /> */}
       </InnerWrapper>
     </Container>
   </OuterWrapper>
