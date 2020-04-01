@@ -69,7 +69,7 @@ const ScreenSection = () => (
             </ImageContainer>
           </Showcase>
           <CounterWrapper>
-            <Counter>43</Counter>
+            <Counter>51</Counter>
             <CounterDescription>
               local businesses on board so far
             </CounterDescription>
